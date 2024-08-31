@@ -1,5 +1,5 @@
-# Campus Track
-Campus Track : University Fleet Tracking System
+# Local Watch - Vehicle Tracking Solution
+
 
 > Developed as part of the EE542 Coursework at University of Southern California
 

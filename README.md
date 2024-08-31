@@ -1,4 +1,4 @@
-# Local Watch - Vehicle Tracking Solution
+# Campus Track - Vehicle Tracking Solution
 
 
 > Developed as part of the EE542 Coursework at University of Southern California

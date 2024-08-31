@@ -1,0 +1,369 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 18,
+                "name": "Leavey Library"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28168487548828,
+                    34.02169418334961
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 19,
+                "name": "JEP House"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.2840347290039,
+                    34.02278137207031
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 20,
+                "name": "Dental School"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28585052490234,
+                    34.02359390258789
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 21,
+                "name": "34th & McClintock"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28740692138672,
+                    34.02427291870117
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 22,
+                "name": "University Regents Apts."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.2870864868164,
+                    34.03034591674805
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 23,
+                "name": "28th & Orchard Ave"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28746795654297,
+                    34.02937316894531
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 42,
+                "name": "Troy East"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28134155273438,
+                    34.02558135986328
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 36,
+                "name": "Centennial Apartments"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28256225585938,
+                    34.031497955322266
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 37,
+                "name": "Sierra Apts"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28299713134766,
+                    34.02947235107422
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 38,
+                "name": "Founders Apts"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28219604492188,
+                    34.030723571777344
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 39,
+                "name": "Hillview Apts"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28104400634766,
+                    34.03020095825195
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 40,
+                "name": "Pacific Apts"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28160095214844,
+                    34.02932357788086
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 41,
+                "name": "28th  St & University"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28119659423828,
+                    34.02770233154297
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 30,
+                "name": "1354 W 24th St"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.29047393798828,
+                    34.034358978271484
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 31,
+                "name": "24th and Ellendale"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28913116455078,
+                    34.03438949584961
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 32,
+                "name": "24th & Magnolia"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28660583496094,
+                    34.034339904785156
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 33,
+                "name": "24th St Theater"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28453826904297,
+                    34.03435516357422
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 34,
+                "name": "23rdSt & Portland"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28121948242188,
+                    34.033626556396484
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 35,
+                "name": "2341 Portland"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28184509277344,
+                    34.03264617919922
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 24,
+                "name": "29th & Orchard Ave."
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28825378417969,
+                    34.02845764160156
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 43,
+                "name": "2726 -2816 Menlo Ave"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.290283203125,
+                    34.029212951660156
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 26,
+                "name": "2658 Menlo"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.29027557373047,
+                    34.03121566772461
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 27,
+                "name": "Adams & Menlo"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.2903060913086,
+                    34.032569885253906
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 28,
+                "name": "2632 Ellendale Pl"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28888702392578,
+                    34.03184127807617
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 29,
+                "name": "2700 Ellendale Pl"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28890991210938,
+                    34.03008270263672
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 53,
+                "name": "University Village"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28692626953125,
+                    34.025230407714844
+                ]
+            }
+        }
+    ]
+}

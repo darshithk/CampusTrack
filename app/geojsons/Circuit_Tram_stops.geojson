@@ -1,0 +1,89 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 6,
+                "name": "Eastlake & Biggy"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.20482635498047,
+                    34.06207275390625
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 7,
+                "name": "Keck Hospital (HCC1)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.20205688476562,
+                    34.062129974365234
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 8,
+                "name": "Outpatient"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.20631408691406,
+                    34.05851364135742
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 9,
+                "name": "HRA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.21356964111328,
+                    34.059288024902344
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 10,
+                "name": "MTA Bus Stop (Marengo & State)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.20985412597656,
+                    34.05760955810547
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 11,
+                "name": "Busway (HSC)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.2100601196289,
+                    34.05588912963867
+                ]
+            }
+        }
+    ]
+}

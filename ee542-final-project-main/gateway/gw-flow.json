@@ -1,0 +1,350 @@
+[
+    {
+        "id": "820a996c.dbdcd8",
+        "type": "tab",
+        "label": "Flow 1"
+    },
+    {
+        "id": "41f8b4eb.4792fc",
+        "type": "mqtt-broker",
+        "z": "",
+        "broker": "mqtt.thingsboard.cloud",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": false,
+        "keepalive": "30",
+        "cleansession": true,
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": ""
+    },
+    {
+        "id": "a8443ae6.a36708",
+        "type": "tls-config",
+        "z": "",
+        "name": "ee542-multitech-gateway",
+        "cert": "/home/root/ee542-multitech-gateway.cert.pem",
+        "key": "/home/root/ee542-multitech-gateway.private.key",
+        "ca": "/home/root/root-CA.crt",
+        "verifyservercert": false
+    },
+    {
+        "id": "f53074d3.be99c8",
+        "type": "mqtt-broker",
+        "z": "",
+        "broker": "a3dt6q7niaetkx-ats.iot.us-east-2.amazonaws.com",
+        "port": "8883",
+        "tls": "a8443ae6.a36708",
+        "clientid": "gw-00-80-00-00-a0-00-45-ba",
+        "usetls": true,
+        "compatmode": false,
+        "keepalive": "60",
+        "cleansession": true,
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": ""
+    },
+    {
+        "id": "6ba74860.362e48",
+        "type": "lora in",
+        "z": "820a996c.dbdcd8",
+        "name": "LoRa Gateway In",
+        "datatype": "utf8",
+        "x": 200,
+        "y": 160,
+        "wires": [
+            [
+                "ed66822e.5c512",
+                "581d7aa0.0b0814"
+            ]
+        ]
+    },
+    {
+        "id": "4ac7cd98.18f0f4",
+        "type": "debug",
+        "z": "820a996c.dbdcd8",
+        "name": "MQTT Out",
+        "active": false,
+        "console": "true",
+        "complete": "payload",
+        "x": 450,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ab29986a.e5e758",
+        "type": "mqtt out",
+        "z": "820a996c.dbdcd8",
+        "name": "AWS IoT Core Out",
+        "topic": "",
+        "qos": "1",
+        "retain": "",
+        "broker": "f53074d3.be99c8",
+        "x": 470,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "6816149b.22583c",
+        "type": "inject",
+        "z": "820a996c.dbdcd8",
+        "name": "xDot Mock Telemetry",
+        "topic": "",
+        "payload": "device-xx, 1700484862,34.02738671770844,-118.28228135112022,0.000",
+        "payloadType": "str",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "x": 180,
+        "y": 280,
+        "wires": [
+            [
+                "581d7aa0.0b0814"
+            ]
+        ]
+    },
+    {
+        "id": "ed66822e.5c512",
+        "type": "debug",
+        "z": "820a996c.dbdcd8",
+        "name": "LoRa In",
+        "active": false,
+        "console": "false",
+        "complete": "true",
+        "x": 400,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "9921479c.65a7c8",
+        "type": "link out",
+        "z": "820a996c.dbdcd8",
+        "name": "",
+        "links": [
+            "57795a4a.d82d94"
+        ],
+        "x": 815,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "57795a4a.d82d94",
+        "type": "link in",
+        "z": "820a996c.dbdcd8",
+        "name": "",
+        "links": [
+            "9921479c.65a7c8"
+        ],
+        "x": 95,
+        "y": 400,
+        "wires": [
+            [
+                "4c125005.9284e"
+            ]
+        ]
+    },
+    {
+        "id": "502789d0.840078",
+        "type": "join",
+        "z": "820a996c.dbdcd8",
+        "name": "",
+        "mode": "custom",
+        "build": "array",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "timeout": "5",
+        "count": "",
+        "x": 670,
+        "y": 180,
+        "wires": [
+            [
+                "9921479c.65a7c8",
+                "686e351b.577dec"
+            ]
+        ]
+    },
+    {
+        "id": "4c125005.9284e",
+        "type": "function",
+        "z": "820a996c.dbdcd8",
+        "name": "Set MQTT Topic",
+        "func": "msg.topic = 'gw/'+msg.gweui+'/node/'+msg.eui+'/telemetry'\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 240,
+        "y": 400,
+        "wires": [
+            [
+                "ab29986a.e5e758",
+                "4ac7cd98.18f0f4"
+            ]
+        ]
+    },
+    {
+        "id": "7757d8b8.05f408",
+        "type": "comment",
+        "z": "820a996c.dbdcd8",
+        "name": "Telemetry Ingestion",
+        "info": "This block is responsible for ingesting data from the LoRa Radio and encoding the data to a JSON format.\n\nIt also debounces the data upload to a maximum of once every 5 seconds.",
+        "x": 450,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "581d7aa0.0b0814",
+        "type": "csv",
+        "z": "820a996c.dbdcd8",
+        "name": "Decode xDot Telemetry",
+        "sep": ",",
+        "hdrin": "",
+        "hdrout": "",
+        "multi": "one",
+        "ret": "\\n",
+        "temp": "device_id, timestamp, latitude, longitude, speed",
+        "x": 450,
+        "y": 220,
+        "wires": [
+            [
+                "bd2ccb25.0fd0a8",
+                "502789d0.840078"
+            ]
+        ]
+    },
+    {
+        "id": "bd2ccb25.0fd0a8",
+        "type": "debug",
+        "z": "820a996c.dbdcd8",
+        "name": "JSON Payload",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 700,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "686e351b.577dec",
+        "type": "debug",
+        "z": "820a996c.dbdcd8",
+        "name": "Debounced Output",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 890,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "f5e965ee.2e55a8",
+        "type": "catch",
+        "z": "820a996c.dbdcd8",
+        "name": "Exceptions",
+        "scope": null,
+        "x": 680,
+        "y": 360,
+        "wires": [
+            [
+                "1a9dcc2d.c3ae04"
+            ]
+        ]
+    },
+    {
+        "id": "1a9dcc2d.c3ae04",
+        "type": "debug",
+        "z": "820a996c.dbdcd8",
+        "name": "Log Exceptions",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 880,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "e4454216.7ef39",
+        "type": "status",
+        "z": "820a996c.dbdcd8",
+        "name": "Status",
+        "scope": null,
+        "x": 670,
+        "y": 420,
+        "wires": [
+            [
+                "51d6fb5e.ca3d64"
+            ]
+        ]
+    },
+    {
+        "id": "51d6fb5e.ca3d64",
+        "type": "debug",
+        "z": "820a996c.dbdcd8",
+        "name": "Log Health",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 870,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "59284fda.1e304",
+        "type": "lora out",
+        "z": "820a996c.dbdcd8",
+        "name": "Lora Gateway Out",
+        "eui": "",
+        "payload": "",
+        "ack": false,
+        "port": "",
+        "x": 390,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "9a8eb4bb.1db6a8",
+        "type": "mqtt in",
+        "z": "820a996c.dbdcd8",
+        "name": "AWS IoT Core In",
+        "topic": "gw/+/node/+/control",
+        "qos": "1",
+        "broker": "f53074d3.be99c8",
+        "x": 160,
+        "y": 600,
+        "wires": [
+            [
+                "59284fda.1e304",
+                "1410db43.0aba15"
+            ]
+        ]
+    },
+    {
+        "id": "1410db43.0aba15",
+        "type": "debug",
+        "z": "820a996c.dbdcd8",
+        "name": "Control Messages",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 390,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "cffeaacc.f79e18",
+        "type": "comment",
+        "z": "820a996c.dbdcd8",
+        "name": "Control Egestion",
+        "info": "This block is responsible for ingesting data from the LoRa Radio and encoding the data to a JSON format.\n\nIt also debounces the data upload to a maximum of once every 5 seconds.",
+        "x": 260,
+        "y": 700,
+        "wires": []
+    }
+]

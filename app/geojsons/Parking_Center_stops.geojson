@@ -1,0 +1,159 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 47,
+                "name": "Grand Structure"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.2779312133789,
+                    34.01961898803711
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 48,
+                "name": "CAL"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.27650451660156,
+                    34.019569396972656
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 18,
+                "name": "Leavey Library"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28168487548828,
+                    34.02169418334961
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 19,
+                "name": "JEP House"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.2840347290039,
+                    34.02278137207031
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 20,
+                "name": "Dental School"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28585052490234,
+                    34.02359390258789
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 21,
+                "name": "34th & McClintock"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28740692138672,
+                    34.02427291870117
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 45,
+                "name": "Michelson Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.2892837524414,
+                    34.021751403808594
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 17,
+                "name": "Vivian Hall"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28810119628906,
+                    34.01991271972656
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 49,
+                "name": "Pardee Way Entrance"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28348541259766,
+                    34.0185546875
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 50,
+                "name": "Busway - UPC"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.2801513671875,
+                    34.0178337097168
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 51,
+                "name": "CAL South"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.277099609375,
+                    34.01850891113281
+                ]
+            }
+        }
+    ]
+}

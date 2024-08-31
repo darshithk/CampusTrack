@@ -1,0 +1,89 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 1,
+                "name": "Soto 1"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.197265625,
+                    34.065887451171875
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 3,
+                "name": "Valley Lot"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.1947021484375,
+                    34.06454086303711
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 6,
+                "name": "Eastlake & Biggy"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.20482635498047,
+                    34.06207275390625
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 4,
+                "name": "Keck bus-turnout (on San Pablo)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.20301818847656,
+                    34.062564849853516
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 5,
+                "name": "CSC"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.1994400024414,
+                    34.06291198730469
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 2,
+                "name": "Soto 2"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.19670867919922,
+                    34.06669616699219
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,47 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 48,
+                "name": "CAL"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.27650451660156,
+                    34.019569396972656
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 14,
+                "name": "Jefferson & Hoover Bus Turnout"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.28333282470703,
+                    34.023258209228516
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 13,
+                "name": "Union Station (Berth 6) Patsaouras Plaza"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.2329330444336,
+                    34.05575942993164
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,75 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 11,
+                "name": "Busway (HSC)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.2100601196289,
+                    34.05588912963867
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 9,
+                "name": "HRA"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.21356964111328,
+                    34.059288024902344
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 52,
+                "name": "Biggy Stop"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.20619201660156,
+                    34.06147766113281
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 6,
+                "name": "Eastlake & Biggy"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.20482635498047,
+                    34.06207275390625
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "Stop ID": 7,
+                "name": "Keck Hospital (HCC1)"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    -118.20205688476562,
+                    34.062129974365234
+                ]
+            }
+        }
+    ]
+}

@@ -42,8 +42,6 @@ class _MyHomePageState extends State<MyHomePage> {
   final _mapController = MapController();
   late LatLng _currentLatLng = const LatLng(34.03088, -118.28213);
 
-  LocationSource _chosenDataSource = LocationSource.phone;
-
   final LocationService _locationService = LocationService.instance;
 
   final GeoJsonParser _geoJsonParser = GeoJsonParser(
@@ -62,10 +60,8 @@ class _MyHomePageState extends State<MyHomePage> {
     _locationService.start();
 
     _locationService.locationStream.listen((event) {
-      log('${DateTime.timestamp().millisecondsSinceEpoch} New location: ${event.coordinates}, source: ${event.source}');
-      if (_chosenDataSource == event.source) {
-        _setLocation(event.coordinates);
-      }
+      log('${DateTime.timestamp().millisecondsSinceEpoch} location: ${event.coordinates}');
+      _setLocation(event.coordinates);
     });
   }
 
@@ -92,45 +88,29 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  void _changeLocationSource() {
-    setState(() {
-      _chosenDataSource = _chosenDataSource == LocationSource.phone
-          ? LocationSource.xdot
-          : LocationSource.phone;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
-        actions: [
-         IconButton(
-          icon: _chosenDataSource == LocationSource.phone
-            ? const Icon(Icons.menu)
-            : const Icon(Icons.menu_open),
-        onPressed: _changeLocationSource,
-      ),
-        ],
       ),
       body: FlutterMap(
-          mapController: _mapController,
-          options: const MapOptions(
-            initialCenter: LatLng(34.021880400280466, -118.2828916972758),
-            initialZoom: 17,
-          ),
-          children: [
-            TileLayer(
-                urlTemplate: "https://tile.openstreetmap.org/{z}/{x}/{y}.png"),
-            _loadingData
-                ? const Center(child: CircularProgressIndicator())
-                : PolygonLayer(polygons: _geoJsonParser.polygons),
-            if (!_loadingData)
-              PolylineLayer(polylines: _geoJsonParser.polylines),
-            if (!_loadingData) MarkerLayer(markers: _geoJsonParser.markers),
-            if (!_loadingData) CircleLayer(circles: _geoJsonParser.circles),
-            MarkerLayer(markers: [
+        mapController: _mapController,
+        options: const MapOptions(
+          initialCenter: LatLng(34.021880400280466, -118.2828916972758),
+          initialZoom: 17,
+        ),
+        children: [
+          TileLayer(
+              urlTemplate: "https://tile.openstreetmap.org/{z}/{x}/{y}.png"),
+          _loadingData
+              ? const Center(child: CircularProgressIndicator())
+              : PolygonLayer(polygons: _geoJsonParser.polygons),
+          if (!_loadingData) PolylineLayer(polylines: _geoJsonParser.polylines),
+          if (!_loadingData) MarkerLayer(markers: _geoJsonParser.markers),
+          if (!_loadingData) CircleLayer(circles: _geoJsonParser.circles),
+          MarkerLayer(
+            markers: [
               Marker(
                 point: _currentLatLng,
                 child: const Icon(
@@ -147,8 +127,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   color: Colors.blue,
                 ),
               ),
-            ],),
-          ],),
+            ],
+          ),
+        ],
+      ),
     );
   }
 }

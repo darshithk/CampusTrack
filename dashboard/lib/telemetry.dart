@@ -8,11 +8,18 @@ class Telemetry {
   DateTime timestamp;
   LatLng coordinates;
   double speed;
-  Telemetry(dynamic data) : deviceId = '', deviceName = '', timestamp = DateTime.now(), coordinates = const LatLng(0, 0), speed = 0 {
+  Telemetry(dynamic data)
+      : deviceId = '',
+        deviceName = '',
+        timestamp = DateTime.now(),
+        coordinates = const LatLng(0, 0),
+        speed = 0 {
     final json = Map.from(data);
     try {
       deviceName = json.containsKey('device_id') ? json['device_id'] : '';
-      timestamp = json.containsKey('timestamp') ? DateTime.fromMillisecondsSinceEpoch(json['timestamp']) : DateTime.now();
+      timestamp = json.containsKey('timestamp')
+          ? DateTime.fromMillisecondsSinceEpoch(json['timestamp'])
+          : DateTime.now();
       // speed = json.containsKey('speed') ? double.tryParse(json['speed']) ?? 0.0 : 0.0;
       if (json.containsKey('latitude') && json.containsKey('longitude')) {
         coordinates = LatLng(json['latitude'], json['longitude']);
